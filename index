@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUMOSAFE Mobile</title>
+    <style>
+        :root { --bg: #010409; --card: #0d1117; --border: #30363d; --accent: #58a6ff; --danger: #f85149; }
+        body { margin: 0; background: var(--bg); color: #c9d1d9; font-family: sans-serif; }
+        .header { padding: 15px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; font-weight: 900; font-size: 14px; color: #fff; }
+        main { padding: 10px; display: grid; gap: 10px; grid-template-columns: 1fr 1fr; }
+        .cam-box { aspect-ratio: 16/9; background: #000; border-radius: 12px; border: 1px solid var(--border); grid-column: span 2; position: relative; display: flex; align-items: center; justify-content: center; }
+        .ai-hud { position: absolute; top: 10px; left: 10px; border: 1px solid #a371f7; color: #a371f7; font-size: 8px; padding: 2px 6px; background: rgba(0,0,0,0.5); font-weight: bold; }
+        .card { background: var(--card); border: 1px solid var(--border); padding: 12px; border-radius: 8px; }
+        .label { font-size: 8px; color: #484f58; text-transform: uppercase; font-weight: bold; }
+        .val { display: block; margin-top: 5px; font-family: monospace; font-size: 12px; color: #fff; }
+        .btn-sos { grid-column: span 2; padding: 18px; background: var(--danger); color: #fff; border: none; border-radius: 10px; font-weight: 900; font-size: 12px; }
+        .btn-ctrl { padding: 12px; background: var(--card); border: 1px solid var(--border); color: var(--accent); border-radius: 8px; font-size: 10px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <span>HUMOSAFE <span style="font-weight:100">MOBILE</span></span>
+        <span style="color:#3fb950;">● ONLINE</span>
+    </div>
+    <main>
+        <div class="cam-box">
+            <div class="ai-hud">NEURAL: AUTHORIZED</div>
+            <div style="color:#111; font-weight:900;">LIVE_FEED</div>
+        </div>
+        <div class="card"><span class="label">GPS: LOC</span><span class="val">11.66°N / 78.14°E</span></div>
+        <div class="card"><span class="label">GSM: COMMS</span><span class="val">STRONG / READY</span></div>
+        <div class="card"><span class="label">MPU9250 TILT</span><span class="val">0.2° / -0.1°</span></div>
+        <div class="card"><span class="label">ULTRASONIC</span><span class="val">142.4 CM</span></div>
+        <div class="card"><span class="label">PIR STATE</span><span class="val" style="color:#3fb950">SECURE</span></div>
+        <div class="card"><span class="label">RFID LOG</span><span class="val">UID: E24A</span></div>
+        <button class="btn-ctrl">PAN SERVO L</button>
+        <button class="btn-ctrl">PAN SERVO R</button>
+        <button class="btn-sos">INITIATE EMERGENCY GSM CALL</button>
+    </main>
+</body>
+</html>
